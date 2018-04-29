@@ -1,0 +1,15 @@
+    .ov-elp {
+        word-break: break-all;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .ov-elp2 {
+        //最多显示两行 多余...
+        word-break: break-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }

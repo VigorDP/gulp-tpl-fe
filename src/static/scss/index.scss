@@ -1,0 +1,10 @@
+@import '_const.scss';
+body>svg {
+	display: none;
+}
+
+.test {
+	background-color: $bg-color;
+	font-size: $a;
+	background-image: url(../img/error.png);
+}

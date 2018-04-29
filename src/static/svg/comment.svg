@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="23px" height="19px" viewBox="0 0 23 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <title>评论</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的详情页" transform="translate(-234.000000, -1656.000000)">
+            <g id="评论" transform="translate(235.000000, 1656.000000)">
+                <path d="M17.8897297,1.03272727 L3.55297297,1.03272727 C1.85402567,1.03272727 0.476756757,2.35633636 0.476756757,3.98909091 L0.476756757,12.2145455 C0.47373892,13.0005103 0.796506595,13.7552785 1.37373646,14.3120659 C1.95096633,14.8688533 2.73513914,15.1818235 3.55297297,15.1818182 L8.33189189,15.1818182 L10.7213514,19 L13.1108108,15.1818182 L17.8897297,15.1818182 C18.705593,15.1818182 19.4880406,14.8703451 20.0649431,14.3159193 C20.6418455,13.7614936 20.9659459,13.0095309 20.9659459,12.2254545 L20.9659459,3.98909091 C20.9659459,3.20501452 20.6418455,2.45305186 20.0649431,1.89862613 C19.4880406,1.3442004 18.705593,1.03272727 17.8897297,1.03272727 L17.8897297,1.03272727 Z" id="Shape" stroke="#545454" stroke-linecap="round" stroke-linejoin="round"></path>
+                <g id="Group" transform="translate(4.540541, 7.000000)" fill-rule="nonzero" fill="#454545">
+                    <ellipse id="Oval" cx="0.970540541" cy="1.39636364" rx="1" ry="1"></ellipse>
+                    <ellipse id="Oval" cx="6.18081081" cy="1.39636364" rx="1" ry="1"></ellipse>
+                    <ellipse id="Oval" cx="11.3910811" cy="1.39636364" rx="1" ry="1"></ellipse>
+                </g>
+                <rect id="Rectangle-11" fill="#545454" x="14" y="0.540039062" width="3" height="1" rx="0.5"></rect>
+                <rect id="Rectangle-11-Copy" fill="#545454" transform="translate(20.960007, 6.500000) rotate(90.000000) translate(-20.960007, -6.500000) " x="19.4600067" y="6" width="3" height="1" rx="0.5"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

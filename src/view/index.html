@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-store, must-revalidate" />
+    <meta http-equiv="expires" content="0" />
+    <title>搜狐墨客</title>
+    <!-- build:css ../static/css/common.css -->
+    @include('../static/template/common/css.html')
+    <!-- endbuild -->
+    <!-- build:css ../static/css/index.css -->
+    <link rel="stylesheet" href="../static/css/index.css">
+    <!-- endbuild -->
+    @include('../static/template/common/setFontSize.html')
+    <style>
+    .icon {
+        width: 1rem;
+        height: 1rem;
+    }
+    </style>
+</head>
+
+<body>
+    @include('../static/template/symbol/svg/sprite.symbol.svg')
+    <header></header>
+    <main>
+        <svg class='icon'>
+            <use xlink:href="#write_comment"></use>
+        </svg>
+        <svg class='icon'>
+            <use xlink:href="#zan_red"></use>
+        </svg>
+        <svg class='icon'>
+            <use xlink:href="#comment"></use>
+        </svg>
+        <svg class='icon'>
+            <use xlink:href="#report"></use>
+        </svg>
+        <svg class='icon'>
+            <use xlink:href="#transmit"></use>
+        </svg>
+        <svg class='icon'>
+            <use xlink:href="#zan_white"></use>
+        </svg>
+    </main>
+    <footer></footer>
+    <!-- 开启监控 -->
+    @if(monitorSwitch === 'true') { @include('../static/template/common/fe-monitor.html', { "author": "@author","project":"@project" }) }
+    <!-- 当开启config.js中埋点开关时会引入埋点脚本 -->
+    @if(buryPointSwitch === 'true') {
+    <!-- 测试环境埋点模板-->
+    @if(env === 'test') { @include('../static/template/common/mixpanel.html', { "appToken": "@testToken" }) }
+    <!-- 线上环境埋点模板-->
+    @if(env === 'product') { @include('../static/template/common/mixpanel.html', { "appToken": "@productToken" }) } }
+    <!-- build:js ../static/js/main.js -->
+    <script src="../static/js/lib/zepto.min.js"></script>
+    <script src="../static/js/lib/doT.min.js"></script>
+    <script src="../static/js/index.js"></script>
+    <!-- 在 test 环境会引入vconsole调试工具 -->
+    @if (env === 'test') { @include('../static/template/common/vconsole.html') }
+</body>
+
+</html>
