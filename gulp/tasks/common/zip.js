@@ -21,8 +21,8 @@ gulp.task('zip', function(cb) {
 });
 
 gulp.task('zip-all', function() {
-	let zip_name = 'sce_' + config.sce[env].appId + '.zip';
-	return gulp.src([config.dist + 'sce/**'])
+	let zip_name = config.project + '.zip';
+	return gulp.src([config.dist])
 		.pipe(gulpZip(zip_name))
 		.pipe(gulp.dest(config.dist));
 });
