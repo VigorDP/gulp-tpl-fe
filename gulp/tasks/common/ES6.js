@@ -22,7 +22,7 @@ gulp.task('ES6', function() {
 					},
 					"modules": 'umd', //可取值"amd" | "umd" | "systemjs" | "commonjs" | false, defaults to "commonjs".
 					"useBuiltIns": true, //使用'babel-polyfill'
-					"debug": NODE_ENV === 'product' ? false : true //这里按server环境来区分是否debug有些欠妥 以后遇到问题再改 @liuxuefeng 20180306
+					"debug": false //这里按server环境来区分是否debug有些欠妥 以后遇到问题再改 @liuxuefeng 20180306
 				}]
 			],
 			ignore: [config.src + 'static/es6/lib/**']

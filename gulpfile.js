@@ -36,36 +36,3 @@ gulp.task('dev', function(cb) {
 	config.isImgOptmize = false;
 	runSequence(['svg'], ['fileInclude', 'eslint', 'ES6', 'imgMin'], ['sass'], ['sprite'], ['dev-server'], cb);
 });
-
-
-
-// if (env === 'dev') {
-// 	require('./gulp/tasks/common/devServer.js');
-// 	require('./gulp/tasks/common/ES6.js');
-// 	require('./gulp/tasks/common/eslint.js');
-// 	require('./gulp/tasks/common/fileInclude.js');
-// 	require('./gulp/tasks/common/imgMin.js');
-// 	require('./gulp/tasks/common/sass.js');
-// 	require('./gulp/tasks/common/uncss.js');
-// 	require('./gulp/tasks/custom/cssSprite.js');
-// } else {
-// 	require('./gulp/tasks/common/cdnPre.js');
-// 	require('./gulp/tasks/common/cssMin.js');
-// 	require('./gulp/tasks/common/delRedundant.js');
-// 	require('./gulp/tasks/common/devServer.js');
-// 	require('./gulp/tasks/common/ES6.js');
-// 	require('./gulp/tasks/common/eslint.js');
-// 	require('./gulp/tasks/common/fileInclude.js');
-// 	require('./gulp/tasks/common/htmlMin.js');
-// 	require('./gulp/tasks/common/imgMin.js');
-// 	require('./gulp/tasks/common/jsMin.js');
-// 	require('./gulp/tasks/common/revision.js');
-// 	require('./gulp/tasks/common/sass.js');
-// 	require('./gulp/tasks/common/uncss.js');
-// 	require('./gulp/tasks/common/usemin.js');
-// 	require('./gulp/tasks/common/zip.js');
-// 	require('./gulp/tasks/custom/cssSprite.js');
-// 	require('./gulp/tasks/custom/openUrl.js');
-// 	require('./gulp/tasks/custom/px2rem.js');
-// 	require('./gulp/tasks/custom/sceInit.js');
-// }

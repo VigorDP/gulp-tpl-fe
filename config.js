@@ -15,7 +15,6 @@ let config = {
 		dev: {
 			proxyTable: {
 				'backend1': 'ink-club-test.sce.sohuno.com', //path to server的proxy映射，key值可以自定义
-				'backend2': 'ink-club2-test.sce.sohuno.com'
 			}
 		},
 		test: {

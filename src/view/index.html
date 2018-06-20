@@ -9,7 +9,7 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-store, must-revalidate" />
     <meta http-equiv="expires" content="0" />
-    <title>搜狐墨客</title>
+    <title>Gulp项目模板</title>
     <!-- build:css ../static/css/common.css -->
     @include('../static/template/common/css.html')
     <!-- endbuild -->
@@ -49,14 +49,6 @@
         </svg>
     </main>
     <footer></footer>
-    <!-- 开启监控 -->
-    @if(monitorSwitch === 'true') { @include('../static/template/common/fe-monitor.html', { "author": "@author","project":"@project" }) }
-    <!-- 当开启config.js中埋点开关时会引入埋点脚本 -->
-    @if(buryPointSwitch === 'true') {
-    <!-- 测试环境埋点模板-->
-    @if(env === 'test') { @include('../static/template/common/mixpanel.html', { "appToken": "@testToken" }) }
-    <!-- 线上环境埋点模板-->
-    @if(env === 'product') { @include('../static/template/common/mixpanel.html', { "appToken": "@productToken" }) } }
     <!-- build:js ../static/js/main.js -->
     <script src="../static/js/lib/zepto.min.js"></script>
     <script src="../static/js/lib/doT.min.js"></script>

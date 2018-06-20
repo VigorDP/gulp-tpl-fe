@@ -14,14 +14,12 @@
 + 静态资源(JS,CSS,Image)加MD5戳防缓存
 + Zip支持
 + 本地开发，实时刷新
-+ 自动埋点
-+ 更多...(提取关键CSS，CSS异步加载等)
 
 
 ## 使用方式：
 ```javascript
-//0、安装依赖
-npm install //安装失败时，可以多install几次，或者删掉node_modules重新install，mac尝试使用sudo npm install
+//0、安装依赖(推荐使用cnpm install )
+cnpm install //安装失败时，可以多install几次，或者删掉node_modules重新install，mac尝试使用sudo cnpm install
 //1、本地开发
 npm run dev
 //2、打测试环境包
@@ -124,21 +122,7 @@ npm run build-product-cdn         //静态资源放CDN
 
 ```
 ## 注意点
-+ uncss无法监听到js文件中动态添加的类名，所以当js文件操作了类名A，同时不希望uncss删掉A，需要在uncss中配置ignore选项，如：
 
-```javascript
-gulp.task('default', function () {
-    return gulp.src('styles/**/*.scss')
-        .pipe(sass())
-        .pipe(concat('main.css'))
-        .pipe(uncss({
-            html: ['index.html', 'posts/**/*.html', 'http://example.com'],
-            ignore:['.A']
-        }))
-        .pipe(nano())
-        .pipe(gulp.dest('./out'));
-});
-```
 + 本模板默认只有js、css、img三种静态资源，如需添加新资源，如font等，请自行添加task
 
 ## 维护须知
@@ -163,7 +147,5 @@ a/**/*
 ```
 如果无法区分以上三个的区别的话，请在写gulp之前，务必看下上述文档。
 
-
-## Help
-@冯银超(yinchaofeng@sohu-inc.com)
-@柳学峰(xuefengliu@sohu-inc.com)
+### 常见问题
+- gulp-sass 安装问题，对于node 版本<8的推荐用v3.13.1;大于8的推荐使用 v3.1.0
