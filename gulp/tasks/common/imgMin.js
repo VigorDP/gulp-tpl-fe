@@ -19,5 +19,5 @@ gulp.task('imgMin', function() {
 			verbose: true
 		})))
 		.pipe(gulp.dest(config.temp + 'static/img'))
-		.pipe(gulp.dest(config.dist + 'sce/app/static/img'));
+		// .pipe(gulp.dest(config.dist + 'sce/app/static/img'));
 });

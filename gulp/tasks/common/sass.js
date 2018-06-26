@@ -27,8 +27,8 @@ gulp.task('sass', function() {
     return gulp.src(config.src + "/static/scss/**/*.scss", {
             base: config.src + 'static/scss'
         })
-        .pipe(gulpSass.sync())
-        .pipe(gulpPlumber(errorHandler))
+    	.pipe(gulpPlumber(errorHandler))
+        .pipe(gulpSass())
         .pipe(gulpAutoprefixer())
         .pipe(gulp.dest(config.temp + "static/css"))
 });

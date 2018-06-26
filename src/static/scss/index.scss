@@ -3,8 +3,8 @@ body>svg {
 	display: none;
 }
 
-.test {
-	background-color: $bg-color;
-	font-size: $a;
-	background-image: url(../img/error.png);
+.container{
+	@include center-xy
+	@include wh(100px,200px)
+	background-color: #fff;
 }

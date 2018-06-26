@@ -2,7 +2,7 @@ let config = {
 	author: 'yinchaofeng@sohu-inc.com',
 	project: 'InkShareFe',
 	src: 'src/',
-	temp: 'temp/',
+	temp: 'dist/',
 	dist: 'dist/',
 	startPath: '/view/index.html', //自行修改
 	buryPointSwitch: true, //是否埋点
