@@ -11,7 +11,7 @@
     "build-product-cdn": "cross-env-shell NODE_ENV=product CDN=true gulp build"
   },
   "dependencies": {
-    "query-string": "^6.1.0"
+    "query-string":"^6.1.0",
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
