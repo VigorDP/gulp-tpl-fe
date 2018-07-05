@@ -8,10 +8,17 @@
     "build-test": "cross-env-shell NODE_ENV=test CDN=false gulp build",
     "build-staging": "cross-env-shell NODE_ENV=staging CDN=false gulp build",
     "build-product": "cross-env-shell NODE_ENV=product CDN=false gulp build",
-    "build-product-cdn": "cross-env-shell NODE_ENV=product CDN=true gulp build"
+    "build-product-cdn": "cross-env-shell NODE_ENV=product CDN=true gulp build",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
-    "query-string":"^6.1.0",
+    "query-string": "^6.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -58,7 +65,10 @@
     "ora": "^1.3.0",
     "require-dir": "^0.3.2",
     "run-sequence": "^2.2.0",
-    "through2": "^2.0.3"
+    "through2": "^2.0.3",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.5"
   },
   "browserslist": [
     "iOS >= 7",
