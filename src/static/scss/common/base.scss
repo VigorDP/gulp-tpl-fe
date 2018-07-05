@@ -46,17 +46,9 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
     margin: 0;
     list-style: none;
     text-decoration: none;
-    border: none;
-    font-family: "Microsoft Yahei";
-    box-sizing: border-box;                   // 默认 border-box
-    -webkit-tap-highlight-color:transparent;  // 禁止输入框点击时出现的阴影
-    -webkit-font-smoothing: antialiased;
+    // border: none;
+    box-sizing: border-box;  // 默认 border-box
     &:hover{
         outline: none;
     }
 }
-input[type="button"], input[type="submit"], input[type="search"], input[type="reset"] {
-    -webkit-appearance: none;
-}
-
-textarea { -webkit-appearance: none;}   
