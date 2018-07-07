@@ -13,12 +13,18 @@ html,body{
     clear: both;
 }
 
-.hide{
+.s-hide{
     display: none;
 }
 
-.show{
+.s-show{
     display: block;
+}
+
+.s-hover{
+    &:hover{
+        cursor:pointer;
+    }
 }
 
 .flex-center{
@@ -27,13 +33,13 @@ html,body{
     align-items: center;
 }
 
-.flex-bt{
+.flex-sb{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.flex-ar{
+.flex-sa{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -42,3 +48,6 @@ html,body{
 .flex-y{
     flex-direction: column;
 }
+
+
+
