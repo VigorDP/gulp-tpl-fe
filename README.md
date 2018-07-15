@@ -5,6 +5,7 @@
 + SASS编译，错误自重启，移除冗余CSS，增量更新
 + Babel编译，ES6支持
 + eslint检查
++ prettier代码格式化
 + CSS雪碧图
 + SVG"雪碧图"
 + 图片压缩
