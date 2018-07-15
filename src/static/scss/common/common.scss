@@ -1,11 +1,4 @@
-html,body{
-    height: 100%;
-    width: 100%;  
-    -webkit-tap-highlight-color: transparent; // 去除button,Input点击时的阴影,IOS私有
-    user-select:none;//禁止用户选择文本
-    -webkit-touch-callout: none;   //禁止图片长按弹出菜单，img和a标签都要加(对图片似乎已经无效了，长安图片总是会弹出系统菜单) 
-    -webkit-appearance: none; // 禁用系统原生样式
-}
+
 
 .clear:after{
     content: '';
