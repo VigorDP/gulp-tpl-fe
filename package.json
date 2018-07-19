@@ -9,7 +9,7 @@
     "build-staging": "cross-env-shell NODE_ENV=staging CDN=false gulp build",
     "build-product": "cross-env-shell NODE_ENV=product CDN=false gulp build",
     "build-product-cdn": "cross-env-shell NODE_ENV=product CDN=true gulp build",
-    "mock-server":"node mock/index.js",
+    "mock-server": "node mock/index.js",
     "precommit": "lint-staged"
   },
   "lint-staged": {
