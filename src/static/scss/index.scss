@@ -1,10 +1,10 @@
 @import '_const.scss';
 body>svg {
-	display: none;
+  display: none;
 }
 
-.container{
-	@include center-xy
-	@include wh(100px,200px)
-	background-color: #fff;
+.container {
+  @include center-xy;
+  @include wh(100px, 200px);
+  background-color: #fff;
 }
