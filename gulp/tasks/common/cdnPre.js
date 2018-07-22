@@ -3,18 +3,23 @@
  */
 
 let gulp = require('gulp'),
-	config = require('../../../config.js'),
-	gulpIf = require('gulp-if'),
-	gulpReplace = require('gulp-replace');
+  config = require('../../../config.js'),
+  gulpIf = require('gulp-if'),
+  gulpReplace = require('gulp-replace');
 
-let {
-	CDN
-} = process.env;
+let { CDN } = process.env;
 
-gulp.task('cdnPre', function() { //
-	return gulp.src(config.dist + 'sce/app/view/**/*.html', {
-			base: config.dist + 'sce/app'
-		})
-		.pipe(gulpIf(CDN === 'true', gulpReplace(/"[./]*static\//g, '"' + config.cdnPath)))
-		.pipe(gulp.dest(config.dist + 'sce/app'))
+gulp.task('cdnPre', function() {
+  //
+  return gulp
+    .src(config.dist + 'sce/app/view/**/*.html', {
+      base: config.dist + 'sce/app'
+    })
+    .pipe(
+      gulpIf(
+        CDN === 'true',
+        gulpReplace(/"[./]*static\//g, '"' + config.cdnPath)
+      )
+    )
+    .pipe(gulp.dest(config.dist + 'sce/app'));
 });

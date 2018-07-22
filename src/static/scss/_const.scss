@@ -3,101 +3,101 @@ $bg-color:red;
 $a:23;
 // 1px 边框解决方案
 @mixin border-1px ($color) {
-  position: relative;
-  &::after {
-    diplay: block;
-    position: absolgitute;
-    content: "";
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    border-top: 1px solid $color;
-    transform-origin: left center;
-  }
-  @media(-webkit-min-device-pixel-ratio:1.5),
-  (min-device-pixel-ratio:1.5) {
+    position: relative;
     &::after {
-      -webkit-transform: scaleY(0.7);
-      transform: scaleY(0.7);
+        display: block;
+        position: absolgitute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid $color;
+        transform-origin: left center;
     }
-  }
-  @media(-webkit-min-device-pixel-ratio:2),
-  (min-device-pixel-ratio:2) {
-    &::after {
-      -webkit-transform: scaleY(0.5);
-      transform: scaleY(0.5);
+    @media(-webkit-min-device-pixel-ratio:1.5),
+    (min-device-pixel-ratio:1.5) {
+        &::after {
+            -webkit-transform: scaleY(0.7);
+            transform: scaleY(0.7);
+        }
     }
-  }
-  @media(-webkit-min-device-pixel-ratio:3),
-  (min-device-pixel-ratio:3) {
-    &::after {
-      -webkit-transform: scaleY(0.33);
-      transform: scaleY(0.33);
+    @media(-webkit-min-device-pixel-ratio:2),
+    (min-device-pixel-ratio:2) {
+        &::after {
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+        }
     }
-  }
+    @media(-webkit-min-device-pixel-ratio:3),
+    (min-device-pixel-ratio:3) {
+        &::after {
+            -webkit-transform: scaleY(0.33);
+            transform: scaleY(0.33);
+        }
+    }
 }
 
 //  Retina 背景图片
 @mixin imgRetina($image, $extension, $width, $height, $position: center, $repeat: no-repeat) {
-  background: url($image + '.' + $extension) $repeat $position;
-  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and ( min--moz-device-pixel-ratio: 2), screen and ( -moz-min-device-pixel-ratio: 2), screen and ( -o-min-device-pixel-ratio: 2/1), screen and ( min-device-pixel-ratio: 2), screen and ( min-resolution: 192dpi), screen and ( min-resolution: 2dppx) {
-    background: url($image + '@2x' + '.' + $extension) $repeat $position;
-    background-size: $width $height;
-  }
+    background: url($image + '.' + $extension) $repeat $position;
+    @media screen and (-webkit-min-device-pixel-ratio: 2), screen and ( min--moz-device-pixel-ratio: 2), screen and ( -moz-min-device-pixel-ratio: 2), screen and ( -o-min-device-pixel-ratio: 2/1), screen and ( min-device-pixel-ratio: 2), screen and ( min-resolution: 192dpi), screen and ( min-resolution: 2dppx) {
+        background: url($image + '@2x' + '.' + $extension) $repeat $position;
+        background-size: $width $height;
+    }
 }
 
 //定位上下左右居中
 @mixin center-xy {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 //定位上下居中
 @mixin center-y {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 //定位左右居中
 @mixin center-x {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 //宽高
 @mixin wh($width, $height) {
-  width: $width;
-  height: $height;
+    width: $width;
+    height: $height;
 }
 
 //字体大小、行高、字体
 @mixin font($size, $line-height, $family: 'Microsoft YaHei') {
-  font: #{$size}/#{$line-height} $family;
+    font: #{$size}/#{$line-height} $family;
 }
 
 //字体大小，颜色
 @mixin sc($size, $color) {
-  font-size: $size;
-  color: $color;
+    font-size: $size;
+    color: $color;
 }
 
 // 文本溢出省略显示
 @mixin text-elp ($width) {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: $width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: $width;
 }
 
 // 多行文本溢出省略显示
 @mixin text-elp-multi ($line) {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: $line;
-  -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
 }

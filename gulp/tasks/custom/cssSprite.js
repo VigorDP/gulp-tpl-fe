@@ -7,25 +7,27 @@
  */
 
 let gulp = require('gulp'),
-	config = require('../../../config.js'),
-	runSequence = require('run-sequence'),
-	gulpSpriteGenerator = require('gulp-sprite-generator');
+  config = require('../../../config.js'),
+  runSequence = require('run-sequence'),
+  gulpSpriteGenerator = require('gulp-sprite-generator');
 
 gulp.task('sprite', function(cb) {
-	runSequence('cssSprite', 'px2rem', cb);
+  runSequence('cssSprite', 'px2rem', cb);
 });
 
-
 gulp.task('cssSprite', function() {
-	var spriteOutput;
-	spriteOutput = gulp.src(config.temp + 'static/css/index.css') //注意修改入口文件名
-		.pipe(gulpSpriteGenerator({
-			baseUrl: '../img',
-			spriteSheetPath: '../img',
-			spriteSheetName: "sprite.png",
-			algorithm: 'left-right' // 竖条图 top-down  长条图 left-right 正方形图 binary-tree
-		}))
+  var spriteOutput;
+  spriteOutput = gulp
+    .src(config.temp + 'static/css/index.css') //注意修改入口文件名
+    .pipe(
+      gulpSpriteGenerator({
+        baseUrl: '../img',
+        spriteSheetPath: '../img',
+        spriteSheetName: 'sprite.png',
+        algorithm: 'left-right' // 竖条图 top-down  长条图 left-right 正方形图 binary-tree
+      })
+    );
 
-	spriteOutput.css.pipe(gulp.dest(config.temp + 'static/css'));
-	return spriteOutput.img.pipe(gulp.dest(config.temp + 'static/img'));
+  spriteOutput.css.pipe(gulp.dest(config.temp + 'static/css'));
+  return spriteOutput.img.pipe(gulp.dest(config.temp + 'static/img'));
 });

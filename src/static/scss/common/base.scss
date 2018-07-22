@@ -1,4 +1,5 @@
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -10,53 +11,85 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
 
 body {
-  line-height: 1;
+    line-height: 1;
 }
 
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
-  content: none;
+    content: '';
+    content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-html,body{
+html,
+body {
     height: 100%;
-    width: 100%;  
-    font-family: PingFangSC-Regular,Microsoft Yahei,SimSun,SimHei;
+    width: 100%;
+    font-family: PingFangSC-Regular, Microsoft Yahei, SimSun, SimHei;
     -webkit-tap-highlight-color: transparent; // 去除button,Input点击时的阴影,IOS私有
-    user-select:none;//禁止用户选择文本
-    -webkit-touch-callout: none;   //禁止图片长按弹出菜单，img和a标签都要加(对图片似乎已经无效了，长安图片总是会弹出系统菜单) 
+    user-select: none; //禁止用户选择文本
+    -webkit-touch-callout: none; //禁止图片长按弹出菜单，img和a标签都要加(对图片似乎已经无效了，长安图片总是会弹出系统菜单)
     -webkit-appearance: none; // 禁用系统原生样式
 }
 
-html,body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption, {
+html,
+body,
+div,
+span,
+header,
+footer,
+nav,
+section,
+aside,
+article,
+ul,
+dl,
+dt,
+dd,
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+b,
+textarea,
+button,
+input,
+select,
+figure,
+figcaption,
+    {
     padding: 0;
     margin: 0;
     list-style: none;
-    text-decoration: none;  
-    box-sizing: border-box;  // 默认 border-box
-    &:hover{
+    text-decoration: none;
+    box-sizing: border-box; // 默认 border-box
+    &:hover {
         outline: none;
     }
 }

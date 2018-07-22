@@ -1,46 +1,41 @@
-
-
-.clear:after{
+.clear:after {
     content: '';
     display: block;
     clear: both;
 }
 
-.s-hide{
+.s-hide {
     display: none;
 }
 
-.s-show{
+.s-show {
     display: block;
 }
 
-.s-hover{
-    &:hover{
-        cursor:pointer;
+.s-hover {
+    &:hover {
+        cursor: pointer;
     }
 }
 
-.flex-center{
-    display:flex;
+.flex-center {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.flex-sb{
+.flex-sb {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.flex-sa{
+.flex-sa {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.flex-y{
+.flex-y {
     flex-direction: column;
 }
-
-
-

@@ -3,11 +3,15 @@
  */
 
 let gulp = require('gulp'),
-	config = require('../../../config.js');
+  config = require('../../../config.js');
 
-gulp.task('jscss2dist', function() { 
-	return gulp.src([config.temp + 'static/js/**/*.js',config.temp + 'static/css/**/*.css'], {
-			base: config.temp
-		})
-		.pipe(gulp.dest(config.dist + 'sce/app/'));
+gulp.task('jscss2dist', function() {
+  return gulp
+    .src(
+      [config.temp + 'static/js/**/*.js', config.temp + 'static/css/**/*.css'],
+      {
+        base: config.temp
+      }
+    )
+    .pipe(gulp.dest(config.dist + 'sce/app/'));
 });

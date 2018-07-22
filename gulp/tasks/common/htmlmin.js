@@ -3,20 +3,26 @@
  */
 
 let gulp = require('gulp'),
-	config = require('../../../config.js'),
-	gulpHtmlmin = require('gulp-htmlmin');
+  config = require('../../../config.js'),
+  gulpHtmlmin = require('gulp-htmlmin');
 
 gulp.task('htmlmin', function() {
-	return gulp.src([
-			config.dist + 'sce/app/view/**/*.html' // '!'+config.dest+'/tpls/write/write.html' 
-		], {
-			base: config.dist + 'sce/app/'
-		})
-		.pipe(gulpHtmlmin({
-			collapseWhitespace: true,
-			removeComments: true,
-			// minifyCSS: true, //内联是否压缩
-			minifyJS: true //内联是否压缩
-		}))
-		.pipe(gulp.dest(config.dist + 'sce/app/'));
+  return gulp
+    .src(
+      [
+        config.dist + 'sce/app/view/**/*.html' // '!'+config.dest+'/tpls/write/write.html'
+      ],
+      {
+        base: config.dist + 'sce/app/'
+      }
+    )
+    .pipe(
+      gulpHtmlmin({
+        collapseWhitespace: true,
+        removeComments: true,
+        // minifyCSS: true, //内联是否压缩
+        minifyJS: true //内联是否压缩
+      })
+    )
+    .pipe(gulp.dest(config.dist + 'sce/app/'));
 });

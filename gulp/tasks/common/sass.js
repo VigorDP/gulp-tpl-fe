@@ -34,7 +34,11 @@ gulp.task('sass', function() {
     .src(config.src + '/static/scss/**/*.scss', {
       base: config.src + 'static/scss'
     })
-    .pipe(gulpSass({ outputStyle: 'expanded' }))
+    .pipe(
+      gulpSass({
+        outputStyle: 'expanded'
+      })
+    )
     .pipe(gulpPlumber(errorHandler))
     .pipe(gulpAutoprefixer())
     .pipe(gulp.dest(config.temp + 'static/css'));
