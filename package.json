@@ -77,6 +77,9 @@
   "browserslist": [
     "iOS >= 7",
     "Android >= 4.1",
-    "Chrome >= 40"
+    "Chrome >= 40",
+    "ie >= 11",
+    "Opera >= 50",
+    "Firefox >= 50"
   ]
 }
